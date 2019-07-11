@@ -56,6 +56,9 @@
   background: white;
   color: #4b8dd0;
 }
+.welcome-aside-button:focus {
+  outline: none;
+}
 
 .welcome-main {
   width: 80%;
