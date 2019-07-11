@@ -1,7 +1,28 @@
 import React from 'react';
 import './Wireframe.css';
+import Spinner from '../UI/Spinner/Spinner';
 
 const wireframe = props => {
+  const posts = props.loading ? (
+    <Spinner />
+  ) : props.error ? (
+    <h2>Sorry! Something went wrong :(</h2>
+  ) : (
+    props.posts.map(post => {
+      let title = post.title;
+      let titleArr = title.split(' ');
+      if (titleArr.length > 6) {
+        title = titleArr.slice(0, 6).join(' ') + '...';
+      }
+      title = title.charAt(0).toUpperCase() + title.slice(1);
+
+      return (
+        <li key={Math.random()} className='wireframe-right__info--item'>
+          {title}
+        </li>
+      );
+    })
+  );
   return (
     <div className='wireframe'>
       <div className='wireframe-left'>
@@ -31,25 +52,7 @@ const wireframe = props => {
           <div className='wireframe-right__info--list'>
             <h3>Custom List</h3>
             <p>Some heading</p>
-            <ul className='wireframe-right__info--items'>
-              {props.posts.map(post => {
-                let title = post.title;
-                let titleArr = title.split(' ');
-                if (titleArr.length > 6) {
-                  title = titleArr.slice(0, 6).join(' ') + '...';
-                }
-                title = title.charAt(0).toUpperCase() + title.slice(1);
-
-                return (
-                  <li
-                    key={post.userId + post.id}
-                    className='wireframe-right__info--item'
-                  >
-                    {title}
-                  </li>
-                );
-              })}
-            </ul>
+            <ul className='wireframe-right__info--items'>{posts}</ul>
           </div>
           <div className='wireframe-right__info--description'>
             <h3>Web Development</h3>
