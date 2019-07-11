@@ -30,15 +30,15 @@ const contacts = () => {
         <div className='contacts-content-right'>
           <form className='message-form'>
             <div className='form-control'>
-              <label for='name'>NAME</label>
-              <input type='text' name='name' autocomplete='off' />
+              <label htmlFor='name'>NAME</label>
+              <input type='text' name='name' autoComplete='off' />
             </div>
             <div className='form-control'>
-              <label for='email'>EMAIL</label>
-              <input type='email' name='email' autocomplete='off' />
+              <label htmlFor='email'>EMAIL</label>
+              <input type='email' name='email' autoComplete='off' />
             </div>
             <div className='form-control'>
-              <label for='message'>MESSAGE</label>
+              <label htmlFor='message'>MESSAGE</label>
               <textarea name='message' rows='10' />
             </div>
             <button type='submit' className='form-button'>

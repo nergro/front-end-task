@@ -1,7 +1,7 @@
 import React from 'react';
 import './Wireframe.css';
 
-const wireframe = () => {
+const wireframe = props => {
   return (
     <div className='wireframe'>
       <div className='wireframe-left'>
@@ -32,16 +32,23 @@ const wireframe = () => {
             <h3>Custom List</h3>
             <p>Some heading</p>
             <ul className='wireframe-right__info--items'>
-              <li className='wireframe-right__info--item'>
-                Sunt aut facere repellat provident occaecati
-              </li>
-              <li className='wireframe-right__info--item'>Qui est esse</li>
-              <li className='wireframe-right__info--item'>
-                Ea molestias quasi exercitationem repellat qui
-              </li>
-              <li className='wireframe-right__info--item'>
-                Eum et est occaecati
-              </li>
+              {props.posts.map(post => {
+                let title = post.title;
+                let titleArr = title.split(' ');
+                if (titleArr.length > 6) {
+                  title = titleArr.slice(0, 6).join(' ') + '...';
+                }
+                title = title.charAt(0).toUpperCase() + title.slice(1);
+
+                return (
+                  <li
+                    key={post.userId + post.id}
+                    className='wireframe-right__info--item'
+                  >
+                    {title}
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className='wireframe-right__info--description'>
