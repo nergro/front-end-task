@@ -1,0 +1,126 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background: #4b8dd0;
+  width: 100%;
+}
+.header-top,
+.header-bottom {
+  width: 80%;
+  margin: auto;
+}
+
+.header-top-nav__items {
+  display: flex;
+  list-style: none;
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  opacity: 0.6;
+}
+.header-top-nav__item {
+  font-size: 0.8rem;
+}
+
+.header-top-nav__item:not(:first-child) {
+  padding: 0 0.7rem;
+}
+.header-top-nav__item:first-child {
+  padding-right: 0.7rem;
+}
+.header-top-nav__item:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+
+.header-top-nav__item a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-bottom-wrapper {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-bottom-brand a {
+  text-decoration: none;
+  color: white;
+}
+.header-bottom-brand a .regular {
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+.header-bottom-brand a .highlighted {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 1.6rem;
+  opacity: 1;
+}
+
+.header-bottom-nav__items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-bottom-nav__item {
+  padding: 0 0.7rem;
+}
+
+.header-bottom-nav__item a {
+  text-decoration: none;
+  color: white;
+}
+.header-top-nav__item a:hover,
+.header-top-nav__item a:active,
+.header-bottom-nav__item a:hover,
+.header-bottom-nav__item a:active {
+  color: #181c1e;
+}
+
+.header-dropdown:hover .header-dropdown-content {
+  display: block;
+}
+.header-dropdown {
+  position: relative;
+}
+.header-dropdown-content {
+  display: none;
+  position: absolute;
+  padding-top: 1rem;
+  right: -45%;
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #181c1e;
+  margin: auto;
+}
+
+.header-dropdown__list {
+  background: #181c1e;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  list-style: none;
+}
+.header-dropdown-list__item {
+  margin: 5px;
+  padding: 0.3rem 3.2rem 0.3rem 1.3rem;
+}
+.header-dropdown-list__item:hover {
+  background: white;
+}
+.header-dropdown-list__item:hover a {
+  color: black;
+}
+.header-dropdown-list__item a {
+  font-family: 'Montserrat';
+  font-size: 0.8rem;
+}
