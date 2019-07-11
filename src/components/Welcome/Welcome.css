@@ -1,0 +1,133 @@
+.welcome {
+  width: 80%;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.welcome-aside {
+  width: 40%;
+  background: #4b8dd0;
+  margin: 0 3rem;
+  padding-right: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.welcome-aside__textbox {
+  padding: 1rem 2rem 1rem 3rem;
+  margin-bottom: 6rem;
+}
+.welcome-aside__textbox h1 {
+  font-size: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.welcome-aside__textbox hr {
+  width: 25%;
+  height: 0.6rem;
+  background: white;
+  margin: 0;
+  border: none;
+}
+.welcome-aside__textbox p {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  width: 90%;
+  line-height: 1.3rem;
+}
+
+.welcome-aside-button-wrapper {
+  width: 90%;
+  text-align: right;
+}
+.welcome-aside-button {
+  padding: 0.6rem;
+  font-weight: bold;
+  border: 3px solid white;
+  background: #4b8dd0;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.welcome-aside-button:hover {
+  background: white;
+  color: #4b8dd0;
+}
+
+.welcome-main {
+  width: 80%;
+  margin: 0 3rem;
+}
+
+.welcome-main img {
+  display: block;
+  width: 100%;
+}
+
+.welcome-main__container {
+  background: #d7d7d7;
+  width: 100%;
+}
+.welcome-main__container--textbox {
+  padding: 3rem 8rem;
+}
+.welcome-main__container--textbox h2 {
+  font-family: 'Montserrat';
+  margin: 0;
+}
+
+.welcome-main__container--textbox p {
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.5rem;
+}
+
+@media (max-width: 94rem) {
+  .welcome-aside__textbox {
+    margin-bottom: 0;
+  }
+  .welcome-main__container--textbox {
+    padding: 3rem 6rem;
+  }
+}
+
+@media (max-width: 70rem) {
+  .welcome-aside__textbox h1 {
+    font-size: 2.5rem;
+  }
+  .welcome-aside__textbox p {
+    font-size: 1rem;
+    width: 80%;
+  }
+  .welcome-main__container--textbox {
+    padding: 3rem 3rem;
+  }
+}
+
+@media (max-width: 65rem) {
+  .welcome {
+    width: 100%;
+    flex-direction: column;
+  }
+  .welcome-aside {
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .welcome-main {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 38rem) {
+  .welcome-aside {
+    flex-direction: column;
+  }
+  .welcome-aside-button-wrapper {
+    margin-bottom: 1rem;
+  }
+}
