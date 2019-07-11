@@ -41,6 +41,7 @@
   margin: 2rem 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header-bottom-brand a {
@@ -91,9 +92,10 @@
   display: none;
   position: absolute;
   padding-top: 1rem;
-  right: -45%;
+  right: -65%;
 }
-.arrow-up {
+.arrow-up,
+.arrow-up-mobile {
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
@@ -111,9 +113,14 @@
   list-style: none;
 }
 .header-dropdown-list__item {
-  margin: 5px;
-  padding: 0.3rem 3.2rem 0.3rem 1.3rem;
+  margin: 0.3rem;
 }
+.header-dropdown-list__item a {
+  margin: 0.3rem;
+  display: block;
+  padding: 0.3rem 5rem 0.3rem 1.3rem;
+}
+
 .header-dropdown-list__item:hover {
   background: white;
 }
@@ -123,4 +130,101 @@
 .header-dropdown-list__item a {
   font-family: 'Montserrat';
   font-size: 0.8rem;
+}
+
+.toggle-button {
+  display: none;
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: white;
+  display: block;
+  margin: 0.6rem 0;
+}
+
+/* Mobile navbar */
+.arrow-up-mobile {
+  border-bottom: 10px solid white;
+}
+
+.mobile-nav {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  background: #181c1e;
+  padding: 1rem 0;
+  transition: transform 0.3s ease-out;
+}
+.mobile-nav-close {
+  transform: translateY(-70vh);
+}
+.mobile-nav-open {
+  transform: translateY(0);
+}
+.mobile-nav__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-nav__item {
+  padding: 0.5rem 0;
+}
+.mobile-nav__item a {
+  text-decoration: none;
+  color: white;
+}
+.mobile-dropdown {
+  width: 90%;
+  display: none;
+}
+.mobile-dropdown-content {
+  background: white;
+  padding-top: 5px;
+  border-radius: 5px;
+}
+.mobile-dropdown__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-dropdown-list__item {
+  padding: 0.3rem 0;
+}
+
+.mobile-dropdown-list__item a {
+  text-decoration: none;
+  color: #181c1e;
+}
+.mobile-nav__item a:active,
+.mobile-dropdown-list__item a:active {
+  color: #095c86;
+}
+
+@media (max-width: 50rem) {
+  .header-top,
+  .header-bottom-nav {
+    display: none;
+  }
+  .toggle-button {
+    display: block;
+  }
 }
