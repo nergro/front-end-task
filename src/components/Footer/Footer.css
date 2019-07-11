@@ -69,7 +69,8 @@
 }
 
 @media (max-width: 50rem) {
-  .footer-nav {
+  .footer-nav,
+  .footer-copyright {
     justify-content: center;
   }
   .footer-nav__item {
