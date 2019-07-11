@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Welcome from './components/Welcome/Welcome';
 import Wireframe from './components/Wireframe/Wireframe';
+import Contacts from './components/Contacts/Contacts';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <Header />
         <Welcome />
         <Wireframe />
+        <Contacts />
       </div>
     );
   }

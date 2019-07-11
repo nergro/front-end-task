@@ -1,0 +1,113 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts-head {
+  width: 80%;
+}
+.contacts-head h1 {
+  font-family: 'Montserrat';
+  color: #181c1e;
+  margin-bottom: 2rem;
+}
+
+.contacts-head hr {
+  width: 5%;
+  height: 0.6rem;
+  background: #181c1e;
+  margin: 0;
+  border: none;
+}
+.contacts-content {
+  display: flex;
+  width: 80%;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.contacts-content-left {
+  width: 50%;
+}
+.contacts-content-right {
+  width: 25%;
+}
+
+.contacts-content-left p {
+  width: 80%;
+  opacity: 0.8;
+}
+
+.form-control {
+  margin-bottom: 0.6rem;
+}
+.form-control label {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: bold;
+  color: #181c1e;
+}
+.form-control input,
+.form-control textarea {
+  width: 100%;
+  font: inherit;
+  padding-left: 0.7rem;
+  border: 3px solid #ccc;
+}
+.form-control textarea {
+  padding-top: 0.7rem;
+  resize: none;
+}
+.form-control input {
+  height: 2rem;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  /* outline: none; */
+  outline: 3px solid #181c1e;
+}
+
+.form-button {
+  font-family: 'Montserrat';
+  padding: 0.5rem;
+  color: #2c9af1;
+  font-weight: bold;
+  border: 3px solid #2c9af1;
+  background: none;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background: #2c9af1;
+  color: white;
+}
+
+@media (max-width: 90rem) {
+  .contacts-content-right {
+    width: 35%;
+  }
+}
+
+@media (max-width: 50rem) {
+  .contacts-content {
+    flex-direction: column;
+  }
+  .contacts-content-left {
+    width: 90%;
+  }
+  .contacts-content-right {
+    width: 80%;
+    margin-top: 2rem;
+  }
+
+  .contacts-content-left p {
+    width: 90%;
+  }
+  .form-control input {
+    width: 80;
+  }
+  .contacts-head hr {
+    width: 10%;
+  }
+}
